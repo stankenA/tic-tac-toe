@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-tac-toe</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body class="page">
+  <main class="main">
+    <section class="game">
+      <div class="game__content">
+        <form class="game__form">
+          <h1 class="game__title">
+            "TIC-TAC-TOE" by stankenA
+          </h1>
+          <fieldset class="game__fieldset">
+            <div class="game__row">
+              <input name="player-1" id="player-1" type="text" class="game__input" value="Player 1"
+                placeholder="First player...">
+              <label class="game__checkbox">
+                <input type="radio" class="game__radio" name="radio" id="player-1-radio" checked>
+                <span class="game__checkmark"></span>
+              </label>
+            </div>
+            <div class="game__row">
+              <input name="player-2" id="player-2" type="text" class="game__input" value="Player 2"
+                placeholder="Second player...">
+              <label class="game__checkbox">
+                <input type="radio" class="game__radio" name="radio" id="player-2-radio">
+                <span class="game__checkmark"></span>
+              </label>
+            </div>
+            <span class="game__hint">First turn</span>
+          </fieldset>
+          <button type="button" class="game__button">Play!</button>
+        </form>
+        <div class="game__top">
+          <h2 class="game__subtitle">
+            Game started!
+          </h2>
+          <p class="game__txt">
+            <span class="game__player">Player 1</span>'s turn
+          </p>
+        </div>
+        <ul class="game__field">
+          <li data-number="1" class="game__cell"></li>
+          <li data-number="2" class="game__cell"></li>
+          <li data-number="3" class="game__cell"></li>
+          <li data-number="4" class="game__cell"></li>
+          <li data-number="5" class="game__cell"></li>
+          <li data-number="6" class="game__cell"></li>
+          <li data-number="7" class="game__cell"></li>
+          <li data-number="8" class="game__cell"></li>
+          <li data-number="9" class="game__cell"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
