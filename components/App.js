@@ -1,7 +1,7 @@
 export default class App {
-  constructor(formSelector) {
+  constructor() {
     // Переменные для работы с формой
-    this._form = document.querySelector(formSelector);
+    this._form = document.querySelector('.game__form');
     this._firstInput = this._form.querySelector('#player-1');
     this._secondInput = this._form.querySelector('#player-2');
     this._playBtn = this._form.querySelector('.game__button');
@@ -97,9 +97,6 @@ export default class App {
 
   // Обработка клика по клетке
   _handleCellClick(evt) {
-    evt.target.classList.add('game__cell_disabled');
-    evt.target.disabled = true;
-
     if (this._isFirstPlayer === true) {
       evt.target.textContent = 'x';
       this._firstPlayerArr.push(Number(evt.target.dataset.number));
@@ -111,6 +108,8 @@ export default class App {
       this._cellsCounter++;
       this._checkArray(this._secondPlayerArr);
     }
+
+    evt.target.classList.add('game__cell_disabled');
   }
 
   // Показать результат
